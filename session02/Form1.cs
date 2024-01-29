@@ -1,4 +1,5 @@
 using MD.PersianDateTime;
+using session02.Service;
 using session02.Utils;
 using System.Windows.Forms;
 
@@ -67,8 +68,14 @@ namespace session02
             MessageBox.Show($"date: {jalali} - day: {days}");
 
 
-            var x = (1, "test", true);            
+            var x = (1, "test", true);
 
+        }
+
+        private void buttonCreateUser_Click(object sender, EventArgs e)
+        {
+            var userService = new UserService();
+            userService.Create();
         }
     }
 }

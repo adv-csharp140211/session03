@@ -36,6 +36,7 @@
             buttonToJalaliAndDays_out = new Button();
             buttonToJalaliAndDays_ref = new Button();
             buttonToJalaliAndDaysTouple = new Button();
+            buttonCreateUser = new Button();
             SuspendLayout();
             // 
             // buttonToJalali
@@ -118,11 +119,22 @@
             buttonToJalaliAndDaysTouple.UseVisualStyleBackColor = true;
             buttonToJalaliAndDaysTouple.Click += buttonToJalaliAndDaysTouple_Click;
             // 
+            // buttonCreateUser
+            // 
+            buttonCreateUser.Location = new Point(273, 128);
+            buttonCreateUser.Name = "buttonCreateUser";
+            buttonCreateUser.Size = new Size(178, 23);
+            buttonCreateUser.TabIndex = 8;
+            buttonCreateUser.Text = "CreateUser";
+            buttonCreateUser.UseVisualStyleBackColor = true;
+            buttonCreateUser.Click += buttonCreateUser_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonCreateUser);
             Controls.Add(buttonToJalaliAndDaysTouple);
             Controls.Add(buttonToJalaliAndDays_ref);
             Controls.Add(buttonToJalaliAndDays_out);
@@ -146,5 +158,6 @@
         private Button buttonToJalaliAndDays_out;
         private Button buttonToJalaliAndDays_ref;
         private Button buttonToJalaliAndDaysTouple;
+        private Button buttonCreateUser;
     }
 }

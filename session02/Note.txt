@@ -1,0 +1,39 @@
+
+	SQL Server 2017-2022
+		Postgres/Oracle/MySql/MariaDB
+
+	code -> datanase access
+		ADO.net
+		Framework
+			ActiveRecord 
+			ORM - Object-Relation Mapping
+				Full Framework	
+					Entity Framework / EF
+						Database First - ef 6 /.net 4
+						Code First - ef core
+				Micro Framework
+					Dapper
+					
+
+
+
+Datebase vs C#
+	Multi Tanent / SaaS
+
+	table -> class (entity - domain object) : PascalCase		
+		column -> peroperty : PascalCase
+
+		Primary Key - PK
+			Id -> int (identity - auto increment)
+
+	
+	data type c#
+		string
+			char (10)		- "ali" -> "ali      "
+			varchar (10)	- "ali" -> "ali"
+				
+			nchar	 (10)	- "ali" -> "ali      "
+			nvarchar (10)	- "ali" -> "ali"
+
+		number
+			int,bigint, smallint, float
