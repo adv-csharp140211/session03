@@ -6,8 +6,10 @@ namespace session02.Utils
 {
     public static class DateUtil
     {
-        public static string MiladiToJalai(DateTime date)
+        public static string MiladiToJalai(DateTime date, string seperator = "/")
         {
+            //1402/11/09
+            //1402-11-09
             var result = "";
             var pc = new PersianCalendar();
             var year = pc.GetYear(date);
@@ -15,21 +17,21 @@ namespace session02.Utils
             var day = pc.GetDayOfMonth(date);
 
             //String concat
-            result = year + "/" + month + "/" + day;
+            result = year + seperator + month + seperator + day;
 
             //string format
-            result = String.Format("{0}/{1}/{2}", year, month, day);
+            result = String.Format("{0}{3}{1}{3}{2}", year, month, day, seperator);
 
             //string template / string interpolation
-            result = $"{year}/{month}/{day}";
+            result = $"{year}{seperator}{month}{seperator}{day}"; 
 
 
             //String builder
             var sb = new StringBuilder();
             sb.Append(year);
-            sb.Append("/");
+            sb.Append(seperator);
             sb.Append(month.ToString("0#"));
-            sb.Append("/");
+            sb.Append(seperator);
             sb.Append(day.ToString("0#"));
             result = sb.ToString();
 
@@ -173,10 +175,10 @@ namespace session02.Utils
             };
         }
 
-        public static DateTime JalaliToMilaldi(string date)
+        public static DateTime JalaliToMilaldi(string date, string seperator = "/")
         {
             // 1402/11/09
-            var parts = date.Split('/'); // ["1402", "11", "09"]
+            var parts = date.Split(seperator); // ["1402", "11", "09"]
 
             var year = Convert.ToInt32(parts[0]);
             var month = Convert.ToInt32(parts[1]);
