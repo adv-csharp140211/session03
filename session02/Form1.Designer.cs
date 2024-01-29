@@ -29,23 +29,35 @@
         private void InitializeComponent()
         {
             buttonToJalali = new Button();
+            buttonGetJalaliMonth = new Button();
             SuspendLayout();
             // 
             // buttonToJalali
             // 
             buttonToJalali.Location = new Point(12, 12);
             buttonToJalali.Name = "buttonToJalali";
-            buttonToJalali.Size = new Size(75, 23);
+            buttonToJalali.Size = new Size(129, 23);
             buttonToJalali.TabIndex = 0;
             buttonToJalali.Text = "To Jalali";
             buttonToJalali.UseVisualStyleBackColor = true;
             buttonToJalali.Click += buttonToJalali_Click;
+            // 
+            // buttonGetJalaliMonth
+            // 
+            buttonGetJalaliMonth.Location = new Point(12, 41);
+            buttonGetJalaliMonth.Name = "buttonGetJalaliMonth";
+            buttonGetJalaliMonth.Size = new Size(129, 23);
+            buttonGetJalaliMonth.TabIndex = 1;
+            buttonGetJalaliMonth.Text = "Get Jalali Month";
+            buttonGetJalaliMonth.UseVisualStyleBackColor = true;
+            buttonGetJalaliMonth.Click += buttonGetJalaliMonth_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonGetJalaliMonth);
             Controls.Add(buttonToJalali);
             Name = "Form1";
             Text = "Form1";
@@ -55,5 +67,6 @@
         #endregion
 
         private Button buttonToJalali;
+        private Button buttonGetJalaliMonth;
     }
 }

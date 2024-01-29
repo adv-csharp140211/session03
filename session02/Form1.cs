@@ -13,5 +13,11 @@ namespace session02
         {
             MessageBox.Show(DateUtil.MiladiToJalai(DateTime.Now));
         }
+
+        private void buttonGetJalaliMonth_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(DateUtil.GetJalaliMonthName(DateTime.Now));
+            MessageBox.Show(DateUtil.GetJalaliMonthName_array(DateTime.Now));
+        }
     }
 }
