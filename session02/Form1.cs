@@ -37,5 +37,19 @@ namespace session02
             var persianDateTime = new PersianDateTime(DateTime.Now);
             MessageBox.Show(persianDateTime.ToLongDateString());
         }
+
+        private void buttonToJalaliAndDays_out_Click(object sender, EventArgs e)
+        {
+            //double days;
+            var jalali = DateUtil.ToJalaliAndDays_out(new DateTime(2001, 1, 1), out double days);
+            MessageBox.Show($"date: {jalali} - day: {days}");
+        }
+
+        private void buttonToJalaliAndDays_ref_Click(object sender, EventArgs e)
+        {
+            double days = 0;
+            var jalali = DateUtil.ToJalaliAndDays_ref(new DateTime(2001, 1, 1), ref days);
+            MessageBox.Show($"date: {jalali} - day: {days}");
+        }
     }
 }

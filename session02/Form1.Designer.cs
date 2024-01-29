@@ -33,6 +33,8 @@
             buttonGetJalaliSeasonName = new Button();
             buttonJalaliToMiladi = new Button();
             buttonLib = new Button();
+            buttonToJalaliAndDays_out = new Button();
+            buttonToJalaliAndDays_ref = new Button();
             SuspendLayout();
             // 
             // buttonToJalali
@@ -85,11 +87,33 @@
             buttonLib.UseVisualStyleBackColor = true;
             buttonLib.Click += buttonLib_Click;
             // 
+            // buttonToJalaliAndDays_out
+            // 
+            buttonToJalaliAndDays_out.Location = new Point(273, 12);
+            buttonToJalaliAndDays_out.Name = "buttonToJalaliAndDays_out";
+            buttonToJalaliAndDays_out.Size = new Size(178, 23);
+            buttonToJalaliAndDays_out.TabIndex = 5;
+            buttonToJalaliAndDays_out.Text = "Out Example";
+            buttonToJalaliAndDays_out.UseVisualStyleBackColor = true;
+            buttonToJalaliAndDays_out.Click += buttonToJalaliAndDays_out_Click;
+            // 
+            // buttonToJalaliAndDays_ref
+            // 
+            buttonToJalaliAndDays_ref.Location = new Point(273, 41);
+            buttonToJalaliAndDays_ref.Name = "buttonToJalaliAndDays_ref";
+            buttonToJalaliAndDays_ref.Size = new Size(178, 23);
+            buttonToJalaliAndDays_ref.TabIndex = 6;
+            buttonToJalaliAndDays_ref.Text = "Ref Example";
+            buttonToJalaliAndDays_ref.UseVisualStyleBackColor = true;
+            buttonToJalaliAndDays_ref.Click += buttonToJalaliAndDays_ref_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonToJalaliAndDays_ref);
+            Controls.Add(buttonToJalaliAndDays_out);
             Controls.Add(buttonLib);
             Controls.Add(buttonJalaliToMiladi);
             Controls.Add(buttonGetJalaliSeasonName);
@@ -107,5 +131,7 @@
         private Button buttonGetJalaliSeasonName;
         private Button buttonJalaliToMiladi;
         private Button buttonLib;
+        private Button buttonToJalaliAndDays_out;
+        private Button buttonToJalaliAndDays_ref;
     }
 }
