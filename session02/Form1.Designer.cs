@@ -35,6 +35,7 @@
             buttonLib = new Button();
             buttonToJalaliAndDays_out = new Button();
             buttonToJalaliAndDays_ref = new Button();
+            buttonToJalaliAndDaysTouple = new Button();
             SuspendLayout();
             // 
             // buttonToJalali
@@ -107,11 +108,22 @@
             buttonToJalaliAndDays_ref.UseVisualStyleBackColor = true;
             buttonToJalaliAndDays_ref.Click += buttonToJalaliAndDays_ref_Click;
             // 
+            // buttonToJalaliAndDaysTouple
+            // 
+            buttonToJalaliAndDaysTouple.Location = new Point(273, 70);
+            buttonToJalaliAndDaysTouple.Name = "buttonToJalaliAndDaysTouple";
+            buttonToJalaliAndDaysTouple.Size = new Size(178, 23);
+            buttonToJalaliAndDaysTouple.TabIndex = 7;
+            buttonToJalaliAndDaysTouple.Text = "Touple Example";
+            buttonToJalaliAndDaysTouple.UseVisualStyleBackColor = true;
+            buttonToJalaliAndDaysTouple.Click += buttonToJalaliAndDaysTouple_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonToJalaliAndDaysTouple);
             Controls.Add(buttonToJalaliAndDays_ref);
             Controls.Add(buttonToJalaliAndDays_out);
             Controls.Add(buttonLib);
@@ -133,5 +145,6 @@
         private Button buttonLib;
         private Button buttonToJalaliAndDays_out;
         private Button buttonToJalaliAndDays_ref;
+        private Button buttonToJalaliAndDaysTouple;
     }
 }

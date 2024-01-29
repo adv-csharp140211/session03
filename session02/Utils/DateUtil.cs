@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Text;
+using System.Windows.Forms;
 
 namespace session02.Utils
 {
@@ -239,6 +240,19 @@ namespace session02.Utils
             days = Math.Floor(diff.TotalDays);
 
             return $"{year}/{month}/{day}";
+        }
+
+        public static (string, double) ToJalaliAndDaysTouple(DateTime date)
+        {
+            var pc = new PersianCalendar();
+            var year = pc.GetYear(date);
+            var month = pc.GetMonth(date);
+            var day = pc.GetDayOfMonth(date);
+
+            var diff = DateTime.Now - date;
+            var days = Math.Floor(diff.TotalDays);
+
+            return ($"{year}/{month}/{day}", days);
         }
     }
 }

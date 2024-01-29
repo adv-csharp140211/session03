@@ -1,5 +1,6 @@
 using MD.PersianDateTime;
 using session02.Utils;
+using System.Windows.Forms;
 
 namespace session02
 {
@@ -50,6 +51,24 @@ namespace session02
             double days = 0;
             var jalali = DateUtil.ToJalaliAndDays_ref(new DateTime(2001, 1, 1), ref days);
             MessageBox.Show($"date: {jalali} - day: {days}");
+        }
+
+        private void buttonToJalaliAndDaysTouple_Click(object sender, EventArgs e)
+        {
+            //var result = DateUtil.ToJalaliAndDaysTouple(new DateTime(2001, 1, 1));
+            //MessageBox.Show($"date: {result.Item1} - day: {result.Item2}");
+
+            //var jalali = result.Item1;
+            //var days = result.Item2;
+            //MessageBox.Show($"date: {jalali} - day: {days}");
+
+            //destructure
+            var (jalali, days) = DateUtil.ToJalaliAndDaysTouple(new DateTime(2001, 1, 1));
+            MessageBox.Show($"date: {jalali} - day: {days}");
+
+
+            var x = (1, "test", true);            
+
         }
     }
 }
