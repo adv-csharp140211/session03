@@ -104,8 +104,74 @@ namespace session02.Utils
         public static string GetJalaliSeasonName(DateTime date)
         {
             //if-else/switch/array/pattern matching
-            return "زمستان";
+            var pc = new PersianCalendar();
+            var month = pc.GetMonth(date);
+            //switch (month)
+            //{
+            //    case 1:
+            //    case 2:
+            //    case 3: return "بهار";
+            //    case 4:
+            //    case 5:
+            //    case 6: return "تابستان";
+            //    case 7:
+            //    case 8:
+            //    case 9: return "پاییز";
+            //    case 10:
+            //    case 11:
+            //    case 12: return "زمستان";
+            //    default: throw new Exception("Wrong DATE!!");
+            //}
 
+            //switch (month)
+            //{
+            //    case 1:
+            //    case 2:
+            //    case 3: return "بهار";
+            //    case 4:
+            //    case 5:
+            //    case 6: return "تابستان";
+            //    case 7:
+            //    case 8:
+            //    case 9: return "پاییز";        
+            //    default: return "زمستان";
+            //}
+
+
+
+
+            //return month switch
+            //{
+            //    1 => "بهار",
+            //    2 => "بهار",
+            //    3 => "بهار",
+            //    4 => "تابستان",
+            //    5 => "تابستان",
+            //    6 => "تابستان",
+            //    7 => "پاییز",
+            //    8 => "پاییز",
+            //    9 => "پاییز",
+            //    _ => "زمستان",
+            //};
+
+            //pattern
+            //return month switch
+            //{
+            //    1 or 2 or 3 => "بهار",
+            //    4 or 5 or 6 => "تابستان",
+            //    7 or 8 or 9 => "پاییز",
+            //    _ => "زمستان",
+            //};
+
+            return month switch
+            {
+                var m when m <= 3 => "بهار",
+                var m when m <= 6 => "تابستان",
+                var m when m <= 9 => "پاییز",
+                _ => "زمستان",
+            };
         }
+
+
     }
 }

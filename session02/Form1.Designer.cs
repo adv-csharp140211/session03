@@ -30,13 +30,14 @@
         {
             buttonToJalali = new Button();
             buttonGetJalaliMonth = new Button();
+            buttonGetJalaliSeasonName = new Button();
             SuspendLayout();
             // 
             // buttonToJalali
             // 
             buttonToJalali.Location = new Point(12, 12);
             buttonToJalali.Name = "buttonToJalali";
-            buttonToJalali.Size = new Size(129, 23);
+            buttonToJalali.Size = new Size(179, 23);
             buttonToJalali.TabIndex = 0;
             buttonToJalali.Text = "To Jalali";
             buttonToJalali.UseVisualStyleBackColor = true;
@@ -46,17 +47,28 @@
             // 
             buttonGetJalaliMonth.Location = new Point(12, 41);
             buttonGetJalaliMonth.Name = "buttonGetJalaliMonth";
-            buttonGetJalaliMonth.Size = new Size(129, 23);
+            buttonGetJalaliMonth.Size = new Size(179, 23);
             buttonGetJalaliMonth.TabIndex = 1;
             buttonGetJalaliMonth.Text = "Get Jalali Month";
             buttonGetJalaliMonth.UseVisualStyleBackColor = true;
             buttonGetJalaliMonth.Click += buttonGetJalaliMonth_Click;
+            // 
+            // buttonGetJalaliSeasonName
+            // 
+            buttonGetJalaliSeasonName.Location = new Point(12, 70);
+            buttonGetJalaliSeasonName.Name = "buttonGetJalaliSeasonName";
+            buttonGetJalaliSeasonName.Size = new Size(179, 23);
+            buttonGetJalaliSeasonName.TabIndex = 2;
+            buttonGetJalaliSeasonName.Text = "Get Jalali Season Name";
+            buttonGetJalaliSeasonName.UseVisualStyleBackColor = true;
+            buttonGetJalaliSeasonName.Click += buttonGetJalaliSeasonName_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonGetJalaliSeasonName);
             Controls.Add(buttonGetJalaliMonth);
             Controls.Add(buttonToJalali);
             Name = "Form1";
@@ -68,5 +80,6 @@
 
         private Button buttonToJalali;
         private Button buttonGetJalaliMonth;
+        private Button buttonGetJalaliSeasonName;
     }
 }
