@@ -34,5 +34,11 @@ namespace session02.Utils
 
             return result;
         }
+
+        public static string GetJalaliMonthName(DateTime date)
+        {
+            //if-else/switch/array/pattern matching
+            return "بهمن";
+        }
     }
 }
