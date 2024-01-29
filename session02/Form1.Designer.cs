@@ -31,6 +31,8 @@
             buttonToJalali = new Button();
             buttonGetJalaliMonth = new Button();
             buttonGetJalaliSeasonName = new Button();
+            buttonJalaliToMiladi = new Button();
+            buttonLib = new Button();
             SuspendLayout();
             // 
             // buttonToJalali
@@ -63,11 +65,33 @@
             buttonGetJalaliSeasonName.UseVisualStyleBackColor = true;
             buttonGetJalaliSeasonName.Click += buttonGetJalaliSeasonName_Click;
             // 
+            // buttonJalaliToMiladi
+            // 
+            buttonJalaliToMiladi.Location = new Point(12, 99);
+            buttonJalaliToMiladi.Name = "buttonJalaliToMiladi";
+            buttonJalaliToMiladi.Size = new Size(179, 23);
+            buttonJalaliToMiladi.TabIndex = 3;
+            buttonJalaliToMiladi.Text = "Jalali To Miladi";
+            buttonJalaliToMiladi.UseVisualStyleBackColor = true;
+            buttonJalaliToMiladi.Click += buttonJalaliToMiladi_Click;
+            // 
+            // buttonLib
+            // 
+            buttonLib.Location = new Point(12, 128);
+            buttonLib.Name = "buttonLib";
+            buttonLib.Size = new Size(179, 23);
+            buttonLib.TabIndex = 4;
+            buttonLib.Text = "Use Lib";
+            buttonLib.UseVisualStyleBackColor = true;
+            buttonLib.Click += buttonLib_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonLib);
+            Controls.Add(buttonJalaliToMiladi);
             Controls.Add(buttonGetJalaliSeasonName);
             Controls.Add(buttonGetJalaliMonth);
             Controls.Add(buttonToJalali);
@@ -81,5 +105,7 @@
         private Button buttonToJalali;
         private Button buttonGetJalaliMonth;
         private Button buttonGetJalaliSeasonName;
+        private Button buttonJalaliToMiladi;
+        private Button buttonLib;
     }
 }

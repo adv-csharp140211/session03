@@ -1,3 +1,4 @@
+using MD.PersianDateTime;
 using session02.Utils;
 
 namespace session02
@@ -23,6 +24,17 @@ namespace session02
         private void buttonGetJalaliSeasonName_Click(object sender, EventArgs e)
         {
             MessageBox.Show(DateUtil.GetJalaliSeasonName(DateTime.Now));
+        }
+
+        private void buttonJalaliToMiladi_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(DateUtil.JalaliToMilaldi("1402/11/09").ToLongDateString());
+        }
+
+        private void buttonLib_Click(object sender, EventArgs e)
+        {
+            var persianDateTime = new PersianDateTime(DateTime.Now);
+            MessageBox.Show(persianDateTime.ToLongDateString());
         }
     }
 }

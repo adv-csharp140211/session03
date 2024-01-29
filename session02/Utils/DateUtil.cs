@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using System.Text;
 
 namespace session02.Utils
@@ -172,6 +173,23 @@ namespace session02.Utils
             };
         }
 
+        public static DateTime JalaliToMilaldi(string date)
+        {
+            // 1402/11/09
+            var parts = date.Split('/'); // ["1402", "11", "09"]
 
+            var year = Convert.ToInt32(parts[0]);
+            var month = Convert.ToInt32(parts[1]);
+            var day = Convert.ToInt32(parts[2]);
+
+            //linq
+            //["1402", "11", "09"] -> [1402, 11, 09]
+            var newParts = parts.Select(x => Convert.ToInt32(x)).ToList();
+            var year2 =newParts[0];
+            var month2 = newParts[1];
+            var day2 =newParts[2];
+
+            return new DateTime(year, month, day, new PersianCalendar());
+        }
     }
 }
