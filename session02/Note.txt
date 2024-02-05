@@ -58,4 +58,9 @@ Source Control System
 
 	Branching
 
-	nasrin Mokhtarian
+<<<<<<< HEAD
+	
+=======
+	git -> gable start -> <git pull>
+>>>>>>> 14862f027c9d8b691701219bd39c568012965bf8
+nasrin Mokhtarian
