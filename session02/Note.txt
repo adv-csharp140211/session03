@@ -1,4 +1,4 @@
-
+﻿
 	SQL Server 2017-2022
 		Postgres/Oracle/MySql/MariaDB
 
@@ -41,7 +41,7 @@ Datebase vs C#
 
 
 
-Source Control System
+Source Control System🚀
 	Central 
 		CVS
 		SubVersion - svn
