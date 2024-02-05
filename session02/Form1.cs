@@ -1,6 +1,7 @@
 using MD.PersianDateTime;
 using session02.Model;
 using session02.Service;
+using session02.UI;
 using session02.Utils;
 using System.Windows.Forms;
 
@@ -75,10 +76,8 @@ namespace session02
 
         private void buttonCreateUser_Click(object sender, EventArgs e)
         {
-            var userService = new UserService();
-            var user = new User { UserName = "admin1", FirstName = "admin1", LastName = "admax1" };
-            userService.Create(user);
-            MessageBox.Show("success");
+            var frm = new FormUser();
+            frm.ShowDialog();
         }
     }
 }

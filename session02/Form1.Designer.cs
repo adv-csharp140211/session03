@@ -125,7 +125,7 @@
             buttonCreateUser.Name = "buttonCreateUser";
             buttonCreateUser.Size = new Size(178, 23);
             buttonCreateUser.TabIndex = 8;
-            buttonCreateUser.Text = "CreateUser";
+            buttonCreateUser.Text = "Users";
             buttonCreateUser.UseVisualStyleBackColor = true;
             buttonCreateUser.Click += buttonCreateUser_Click;
             // 
