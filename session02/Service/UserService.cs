@@ -10,7 +10,7 @@ namespace session02.Service
 {
     public class UserService
     {
-        //Session06 🚀
+        //Session03 🚀
         string connString = "Server=.;Database=cs140211;Trusted_Connection=True; TrustServerCertificate=True";
         //Connection String
 
