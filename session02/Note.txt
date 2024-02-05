@@ -1,4 +1,4 @@
-
+﻿
 	SQL Server 2017-2022
 		Postgres/Oracle/MySql/MariaDB
 
@@ -41,7 +41,7 @@ Datebase vs C#
 
 
 
-Source Control System
+Source Control System🚀
 	Central 
 		CVS
 		SubVersion - svn
@@ -58,6 +58,15 @@ Source Control System
 
 	Branching
 
+<<<<<<< HEAD
 	kiana
-	nasrin
+	
 	git -> gable start -> <git pull>
+=======
+	
+
+	git -> gable start -> <git pull>
+	kiana
+	Mohammad Mahdi
+>>>>>>> 4f1088ac3ddfc829e7f498a6ec953fb5f8112eae
+nasrin
