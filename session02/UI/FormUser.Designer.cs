@@ -37,11 +37,12 @@
             panel1 = new Panel();
             buttonCreate = new Button();
             dataGridViewUsers = new DataGridView();
-            buttonLoadData = new Button();
             id = new DataGridViewTextBoxColumn();
             firstName = new DataGridViewTextBoxColumn();
             lastName = new DataGridViewTextBoxColumn();
             userName = new DataGridViewTextBoxColumn();
+            delete = new DataGridViewButtonColumn();
+            buttonLoadData = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).BeginInit();
             SuspendLayout();
@@ -123,22 +124,13 @@
             dataGridViewUsers.AllowUserToAddRows = false;
             dataGridViewUsers.AllowUserToDeleteRows = false;
             dataGridViewUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewUsers.Columns.AddRange(new DataGridViewColumn[] { id, firstName, lastName, userName });
+            dataGridViewUsers.Columns.AddRange(new DataGridViewColumn[] { id, firstName, lastName, userName, delete });
             dataGridViewUsers.Location = new Point(12, 156);
             dataGridViewUsers.Name = "dataGridViewUsers";
             dataGridViewUsers.ReadOnly = true;
             dataGridViewUsers.Size = new Size(742, 269);
             dataGridViewUsers.TabIndex = 7;
-            // 
-            // buttonLoadData
-            // 
-            buttonLoadData.Location = new Point(679, 127);
-            buttonLoadData.Name = "buttonLoadData";
-            buttonLoadData.Size = new Size(75, 23);
-            buttonLoadData.TabIndex = 8;
-            buttonLoadData.Text = "Load Data";
-            buttonLoadData.UseVisualStyleBackColor = true;
-            buttonLoadData.Click += buttonLoadData_Click;
+            dataGridViewUsers.CellContentClick += dataGridViewUsers_CellContentClick;
             // 
             // id
             // 
@@ -167,6 +159,24 @@
             userName.HeaderText = "نام کاربری";
             userName.Name = "userName";
             userName.ReadOnly = true;
+            // 
+            // delete
+            // 
+            delete.HeaderText = "حذف";
+            delete.Name = "delete";
+            delete.ReadOnly = true;
+            delete.Text = "حذف";
+            delete.UseColumnTextForButtonValue = true;
+            // 
+            // buttonLoadData
+            // 
+            buttonLoadData.Location = new Point(679, 127);
+            buttonLoadData.Name = "buttonLoadData";
+            buttonLoadData.Size = new Size(75, 23);
+            buttonLoadData.TabIndex = 8;
+            buttonLoadData.Text = "Load Data";
+            buttonLoadData.UseVisualStyleBackColor = true;
+            buttonLoadData.Click += buttonLoadData_Click;
             // 
             // FormUser
             // 
@@ -201,5 +211,6 @@
         private DataGridViewTextBoxColumn firstName;
         private DataGridViewTextBoxColumn lastName;
         private DataGridViewTextBoxColumn userName;
+        private DataGridViewButtonColumn delete;
     }
 }

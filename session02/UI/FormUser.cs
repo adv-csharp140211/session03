@@ -39,8 +39,28 @@ namespace session02.UI
 
         private void buttonLoadData_Click(object sender, EventArgs e)
         {
+            loadData();
+        }
+
+        private void loadData()
+        {
             var userService = new UserService();
             dataGridViewUsers.DataSource = userService.Read();
+        }
+
+        private void dataGridViewUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var id = Convert.ToInt32(dataGridViewUsers.Rows[e.RowIndex].Cells["id"].Value);
+            if(dataGridViewUsers.CurrentCell.OwningColumn.Name == "delete")
+            {
+                if(MessageBox.Show("مطئمن هستید؟", "حذف", MessageBoxButtons.YesNo) == DialogResult.Yes){
+                    var userService = new UserService();
+                    userService.Delete(id);
+                    loadData();
+                    MessageBox.Show("success");
+                }
+
+            }
         }
     }
 }

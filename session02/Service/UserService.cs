@@ -94,6 +94,35 @@ namespace session02.Service
             return result;
         }
 
+        internal void Delete(int id)
+        {
+            var conn = new SqlConnection(connString);
+            var command = new SqlCommand();
+            //Parameters
+            command.CommandText = "usp_UsersDelete";
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("Id", id);
+            command.Connection = conn;
+            conn.Open();
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
 
+        public void Update(User model)
+        {
+            var conn = new SqlConnection(connString);
+            var command = new SqlCommand();
+            //Parameters
+            command.CommandText = "[dbo].[usp_UsersUpdsate]";
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("Id", model.Id);
+            command.Parameters.AddWithValue("FirstName", model.FirstName);
+            command.Parameters.AddWithValue("LastName", model.LastName);
+            command.Parameters.AddWithValue("UserName", model.UserName);
+            command.Connection = conn;
+            conn.Open();
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }
