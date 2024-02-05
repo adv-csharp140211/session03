@@ -58,8 +58,15 @@ Source Control System🚀
 
 	Branching
 
+<<<<<<< HEAD
+	kiana
+	
+	git -> gable start -> <git pull>
+=======
 	
 
 	git -> gable start -> <git pull>
 	kiana
 	Mohammad Mahdi
+>>>>>>> 4f1088ac3ddfc829e7f498a6ec953fb5f8112eae
+nasrin
