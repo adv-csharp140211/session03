@@ -37,3 +37,24 @@ Datebase vs C#
 
 		number
 			int,bigint, smallint, float
+
+
+
+
+Source Control System
+	Central 
+		CVS
+		SubVersion - svn
+		SourceSafe
+		TFS -> TSVC
+			-> AzureDevOps
+	Distributed
+		Git
+			github
+			gitlab
+			bitbucket
+		Mecrial-Hg
+		..
+
+	Branching
+
