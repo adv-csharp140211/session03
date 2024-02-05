@@ -36,10 +36,14 @@
             label3 = new Label();
             panel1 = new Panel();
             buttonCreate = new Button();
-            dataGridView1 = new DataGridView();
+            dataGridViewUsers = new DataGridView();
             buttonLoadData = new Button();
+            id = new DataGridViewTextBoxColumn();
+            firstName = new DataGridViewTextBoxColumn();
+            lastName = new DataGridViewTextBoxColumn();
+            userName = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -114,13 +118,17 @@
             buttonCreate.UseVisualStyleBackColor = true;
             buttonCreate.Click += buttonCreate_Click;
             // 
-            // dataGridView1
+            // dataGridViewUsers
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 156);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(742, 269);
-            dataGridView1.TabIndex = 7;
+            dataGridViewUsers.AllowUserToAddRows = false;
+            dataGridViewUsers.AllowUserToDeleteRows = false;
+            dataGridViewUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewUsers.Columns.AddRange(new DataGridViewColumn[] { id, firstName, lastName, userName });
+            dataGridViewUsers.Location = new Point(12, 156);
+            dataGridViewUsers.Name = "dataGridViewUsers";
+            dataGridViewUsers.ReadOnly = true;
+            dataGridViewUsers.Size = new Size(742, 269);
+            dataGridViewUsers.TabIndex = 7;
             // 
             // buttonLoadData
             // 
@@ -130,6 +138,35 @@
             buttonLoadData.TabIndex = 8;
             buttonLoadData.Text = "Load Data";
             buttonLoadData.UseVisualStyleBackColor = true;
+            buttonLoadData.Click += buttonLoadData_Click;
+            // 
+            // id
+            // 
+            id.DataPropertyName = "id";
+            id.HeaderText = "شناسه";
+            id.Name = "id";
+            id.ReadOnly = true;
+            // 
+            // firstName
+            // 
+            firstName.DataPropertyName = "FirstName";
+            firstName.HeaderText = "نام";
+            firstName.Name = "firstName";
+            firstName.ReadOnly = true;
+            // 
+            // lastName
+            // 
+            lastName.DataPropertyName = "LastName";
+            lastName.HeaderText = "نام خانوادگی";
+            lastName.Name = "lastName";
+            lastName.ReadOnly = true;
+            // 
+            // userName
+            // 
+            userName.DataPropertyName = "UserName";
+            userName.HeaderText = "نام کاربری";
+            userName.Name = "userName";
+            userName.ReadOnly = true;
             // 
             // FormUser
             // 
@@ -137,14 +174,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(766, 437);
             Controls.Add(buttonLoadData);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewUsers);
             Controls.Add(panel1);
             Name = "FormUser";
             Text = "FormUser";
             Load += FormUser_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewUsers).EndInit();
             ResumeLayout(false);
         }
 
@@ -158,7 +195,11 @@
         private Label label3;
         private Panel panel1;
         private Button buttonCreate;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewUsers;
         private Button buttonLoadData;
+        private DataGridViewTextBoxColumn id;
+        private DataGridViewTextBoxColumn firstName;
+        private DataGridViewTextBoxColumn lastName;
+        private DataGridViewTextBoxColumn userName;
     }
 }

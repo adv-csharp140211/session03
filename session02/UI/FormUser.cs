@@ -27,13 +27,20 @@ namespace session02.UI
         private void buttonCreate_Click(object sender, EventArgs e)
         {
             var userService = new UserService();
-            var user = new User { 
-                UserName = textBoxUserName.Text, 
-                FirstName = textBoxFirstName.Text, 
+            var user = new User
+            {
+                UserName = textBoxUserName.Text,
+                FirstName = textBoxFirstName.Text,
                 LastName = textBoxLastName.Text
             };
-            userService.Create(user);
+            userService.CreateSP(user);
             MessageBox.Show("success");
+        }
+
+        private void buttonLoadData_Click(object sender, EventArgs e)
+        {
+            var userService = new UserService();
+            dataGridViewUsers.DataSource = userService.Read();
         }
     }
 }
