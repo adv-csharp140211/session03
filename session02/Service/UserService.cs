@@ -28,7 +28,7 @@ namespace session02.Service
         {
             var conn = new SqlConnection(connString);
             var command = new SqlCommand();
-            command.CommandText = $"INSERT into users  (FirstName, LastName, UserName) values ('{model.FirstName}', '{model.LastName}', '{model.UserName}')";
+            //🐞 command.CommandText = $"INSERT into users  (FirstName, LastName, UserName) values ('{model.FirstName}', '{model.LastName}', '{model.UserName}')";
             //🐞 sql injection 💉
             //model.UserName -> xyz
             //model.UserName -> 💉 xyz'); delete users; --
