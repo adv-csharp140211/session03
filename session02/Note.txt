@@ -60,3 +60,4 @@ Source Control System
 
 	kiana
 
+	git -> gable start -> <git pull>
