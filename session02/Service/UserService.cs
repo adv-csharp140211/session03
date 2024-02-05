@@ -76,6 +76,7 @@ namespace session02.Service
             
             conn.Open();
 
+            //Object-Relation Mapping
             var reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -113,7 +114,7 @@ namespace session02.Service
             var conn = new SqlConnection(connString);
             var command = new SqlCommand();
             //Parameters
-            command.CommandText = "[dbo].[usp_UsersUpdsate]";
+            command.CommandText = "[dbo].[usp_UsersUpdate]";
             command.CommandType = System.Data.CommandType.StoredProcedure;
             command.Parameters.AddWithValue("Id", model.Id);
             command.Parameters.AddWithValue("FirstName", model.FirstName);

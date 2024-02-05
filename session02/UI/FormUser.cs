@@ -51,9 +51,10 @@ namespace session02.UI
         private void dataGridViewUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var id = Convert.ToInt32(dataGridViewUsers.Rows[e.RowIndex].Cells["id"].Value);
-            if(dataGridViewUsers.CurrentCell.OwningColumn.Name == "delete")
+            if (dataGridViewUsers.CurrentCell.OwningColumn.Name == "delete")
             {
-                if(MessageBox.Show("مطئمن هستید؟", "حذف", MessageBoxButtons.YesNo) == DialogResult.Yes){
+                if (MessageBox.Show("مطئمن هستید؟", "حذف", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
                     var userService = new UserService();
                     userService.Delete(id);
                     loadData();
@@ -61,6 +62,28 @@ namespace session02.UI
                 }
 
             }
+            if (dataGridViewUsers.CurrentCell.OwningColumn.Name == "edit")
+            {
+                textBoxFN.Text = Convert.ToString(dataGridViewUsers.Rows[e.RowIndex].Cells["firstName"].Value);
+                textBoxLN.Text = Convert.ToString(dataGridViewUsers.Rows[e.RowIndex].Cells["lastName"].Value);
+                textBoxUN.Text = Convert.ToString(dataGridViewUsers.Rows[e.RowIndex].Cells["userName"].Value);
+                selectedId = id;
+            }
+        }
+
+        int selectedId = -1;
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            var userService = new UserService();
+            var user = new User
+            {
+                Id = selectedId,
+                UserName = textBoxUN.Text,
+                FirstName = textBoxFN.Text,
+                LastName = textBoxLN.Text
+            };
+            userService.Update(user);
+            MessageBox.Show("success");
         }
     }
 }
