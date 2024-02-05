@@ -128,7 +128,7 @@
             dataGridViewUsers.Location = new Point(12, 156);
             dataGridViewUsers.Name = "dataGridViewUsers";
             dataGridViewUsers.ReadOnly = true;
-            dataGridViewUsers.Size = new Size(742, 269);
+            dataGridViewUsers.Size = new Size(799, 269);
             dataGridViewUsers.TabIndex = 7;
             dataGridViewUsers.CellContentClick += dataGridViewUsers_CellContentClick;
             // 
@@ -170,7 +170,7 @@
             // 
             // buttonLoadData
             // 
-            buttonLoadData.Location = new Point(679, 127);
+            buttonLoadData.Location = new Point(736, 127);
             buttonLoadData.Name = "buttonLoadData";
             buttonLoadData.Size = new Size(75, 23);
             buttonLoadData.TabIndex = 8;
@@ -182,7 +182,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(766, 437);
+            ClientSize = new Size(823, 437);
             Controls.Add(buttonLoadData);
             Controls.Add(dataGridViewUsers);
             Controls.Add(panel1);
