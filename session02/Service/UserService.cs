@@ -33,5 +33,16 @@ namespace session02.Service
             command.ExecuteNonQuery();
             conn.Close();
         }
+
+        public void Edit()
+        {
+            var conn = new SqlConnection(connString);
+            var command = new SqlCommand();
+            command.CommandText = "INSERT into users  (ID, FirstName, LastName, UserName) values (1, 'a', 'b', 'c')";
+            command.Connection = conn;
+            conn.Open();
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }
