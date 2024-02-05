@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using session02.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,26 +24,28 @@ namespace session02.Service
          * 7. SQLConnection close
          * */
 
-        public void Create()
+        public void Create(User model)
         {
             var conn = new SqlConnection(connString);
             var command = new SqlCommand();
-            command.CommandText = "INSERT into users  (ID, FirstName, LastName, UserName) values (1, 'a', 'b', 'c')";
+            command.CommandText = $"INSERT into users  (FirstName, LastName, UserName) values ('{model.FirstName}', '{model.LastName}', '{model.UserName}')";
+            //🐞 sql injection 💉
+            //model.UserName -> xyz
+            //model.UserName -> 💉 xyz'); delete users; --
+
+            //Parameters
+            command.CommandText = $"INSERT into users  (FirstName, LastName, UserName) values (@FirstName, @LastName, @UserName)";
+            command.Parameters.AddWithValue("FirstName", model.FirstName);
+            command.Parameters.AddWithValue("LastName", model.LastName);
+            command.Parameters.AddWithValue("UserName", model.UserName);
             command.Connection = conn;
             conn.Open();
             command.ExecuteNonQuery();
             conn.Close();
         }
 
-        public void Edit()
-        {
-            var conn = new SqlConnection(connString);
-            var command = new SqlCommand();
-            command.CommandText = "INSERT into users  (ID, FirstName, LastName, UserName) values (1, 'a', 'b', 'c')";
-            command.Connection = conn;
-            conn.Open();
-            command.ExecuteNonQuery();
-            conn.Close();
-        }
+        // CRUD - Create, Read, Update, Delete
+
+       
     }
 }
